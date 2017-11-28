@@ -23,11 +23,23 @@
                                     <constraint firstAttribute="height" constant="44" id="Cjr-Dp-MEq"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem systemItem="rewind" id="jcG-gB-B9c"/>
+                                    <barButtonItem systemItem="rewind" id="jcG-gB-B9c">
+                                        <connections>
+                                            <action selector="back:" destination="BYZ-38-t0r" id="wgG-8S-Ejg"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="GcV-jb-kRw"/>
-                                    <barButtonItem systemItem="refresh" id="HuG-8a-Mob"/>
+                                    <barButtonItem systemItem="refresh" id="HuG-8a-Mob">
+                                        <connections>
+                                            <action selector="refesh:" destination="BYZ-38-t0r" id="Xmx-sI-yGm"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UPZ-zJ-ZGN"/>
-                                    <barButtonItem systemItem="fastForward" id="J1u-BT-AfX"/>
+                                    <barButtonItem systemItem="fastForward" id="J1u-BT-AfX">
+                                        <connections>
+                                            <action selector="forward:" destination="BYZ-38-t0r" id="p2J-l9-Nnb"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeS-A3-RtZ">
@@ -37,6 +49,9 @@
                                     <constraint firstAttribute="height" constant="30" id="xmH-Nx-ybD"/>
                                 </constraints>
                                 <state key="normal" title="🔍"/>
+                                <connections>
+                                    <action selector="Duyet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G1e-qF-CNr"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPM-bC-lEI">
                                 <rect key="frame" x="0.0" y="35" width="37" height="30"/>
@@ -56,6 +71,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="txtURLEDE:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="l3t-3n-MJ5"/>
+                                </connections>
                             </textField>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Mc-Dq-P0E">
                                 <rect key="frame" x="0.0" y="70" width="375" height="553"/>
@@ -92,6 +110,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="txtURL" destination="pYl-2a-Cr9" id="yY1-kO-w79"/>
+                        <outlet property="webView" destination="9Mc-Dq-P0E" id="c5r-A2-YrT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
